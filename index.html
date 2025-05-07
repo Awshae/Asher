@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asher Jarvis Pinto | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <style>
+    .tech-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.3)),
+            repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.1) 2px, rgba(0, 229, 255, 0.1) 4px);
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    #neural-network-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    .digital-noise {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><g fill="%2300e5ff" opacity="0.1"><rect x="10" y="10" width="1" height="1"/><rect x="30" y="10" width="1" height="1"/><rect x="50" y="10" width="1" height="1"/><rect x="70" y="10" width="1" height="1"/><rect x="90" y="10" width="1" height="1"/><rect x="20" y="20" width="1" height="1"/><rect x="40" y="20" width="1" height="1"/><rect x="60" y="20" width="1" height="1"/><rect x="80" y="20" width="1" height="1"/><rect x="10" y="30" width="1" height="1"/><rect x="30" y="30" width="1" height="1"/><rect x="50" y="30" width="1" height="1"/><rect x="70" y="30" width="1" height="1"/><rect x="90" y="30" width="1" height="1"/><rect x="20" y="40" width="1" height="1"/><rect x="40" y="40" width="1" height="1"/><rect x="60" y="40" width="1" height="1"/><rect x="80" y="40" width="1" height="1"/><rect x="10" y="50" width="1" height="1"/><rect x="30" y="50" width="1" height="1"/><rect x="50" y="50" width="1" height="1"/><rect x="70" y="50" width="1" height="1"/><rect x="90" y="50" width="1" height="1"/><rect x="20" y="60" width="1" height="1"/><rect x="40" y="60" width="1" height="1"/><rect x="60" y="60" width="1" height="1"/><rect x="80" y="60" width="1" height="1"/><rect x="10" y="70" width="1" height="1"/><rect x="30" y="70" width="1" height="1"/><rect x="50" y="70" width="1" height="1"/><rect x="70" y="70" width="1" height="1"/><rect x="90" y="70" width="1" height="1"/><rect x="20" y="80" width="1" height="1"/><rect x="40" y="80" width="1" height="1"/><rect x="60" y="80" width="1" height="1"/><rect x="80" y="80" width="1" height="1"/><rect x="10" y="90" width="1" height="1"/><rect x="30" y="90" width="1" height="1"/><rect x="50" y="90" width="1" height="1"/><rect x="70" y="90" width="1" height="1"/><rect x="90" y="90" width="1" height="1"/></g></svg>');
+        z-index: -1;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    <div class="tech-circuit"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+    <nav id="navbar">
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#organizations" class="nav-link">Organizations</a>
+            <a href="#certificates" class="nav-link">Certificates</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+    <main>
+        <section id="hero" class="section">
+    <div class="container">
+        <div class="hero-content">
+            
+            <h1 id="name-heading">ASHER JARVIS PINTO</h1>
+            <h2 class="fade-in">Robotics and AI Engineering Undergraduate</h2>
+            <p class="tagline fade-slide">⚲ Karnataka, India</p>
+            <div class="hero-cta fade-in">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                <a href="assets/resume.pdf" class="btn primary-btn" target="_blank">My Resume</a>
+            </div>
+        </div>
+        <canvas id="hero-neural-network" class="neural-network-background"></canvas>
+    </div>
+</section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">About Me</h2>
+                <div class="about-content">
+
+                    <div class="image-container fade-in">
+                        <img src="assets/pfp.png" alt="Profile Picture" class="profile-pic" />
+                    </div>
+
+                    <div class="about-text fade-in">
+                        <p>I have expertise in developing AI systems, neural networks, and data-driven solutions.<br> My work focuses on data analysis, ML model tuning and deployment.<br>I'm currently exploring backend programming using nodeJS, Postman and SQL.</p>
+                        <p>I enjoy research in Deep Learning, Image Processing and LLMs.<br>On the casual side of things I like Illustrating on both traditional and digital mediums <br> and also have an interest in learning new languages.</p>
+                        <div class="skills">
+                            <div class="skill-category">
+                                <h3>Programming and Development</h3>
+                                <div class="skill-tags">
+                                  <span class="skill-tag">Python</span>
+                                  <span class="skill-tag">MySQL</span>
+                                  <span class="skill-tag">JavaScript</span>
+                                  <span class="skill-tag">React</span>
+                                  <span class="skill-tag">Flask</span>
+                                  <span class="skill-tag">VS Code</span>
+                                </div>
+                              </div>
+                              
+                              <div class="skill-category">
+                                <h3>AIML and Data Science</h3>
+                                <div class="skill-tags">
+                                  <span class="skill-tag">Scikit-Learn</span> 
+                                  <span class="skill-tag">TensorFlow</span>
+                                  <span class="skill-tag">Pandas</span>
+                                  <span class="skill-tag">NumPy</span>
+                                  <span class="skill-tag">Keras</span>
+                                  <span class="skill-tag">Matplotlib</span>
+                                  <span class="skill-tag">PyTorch</span>
+                                </div>
+                              </div>
+                              
+                              <div class="skill-category">
+                                <h3>Robotics</h3>
+                                <div class="skill-tags">
+                                  <span class="skill-tag">Arduino</span>
+                                  <span class="skill-tag">Sensor Fusion</span>
+                                  <span class="skill-tag">Control Systems</span>
+                                  <span class="skill-tag">MATLAB</span>
+                                  <span class="skill-tag">Simulink</span>
+                                </div>
+                              </div>
+                              
+                              <div class="skill-category">
+                                <h3>Other Tools</h3>
+                                <div class="skill-tags">
+                                  <span class="skill-tag">Git / GitHub</span>
+                                  <span class="skill-tag">Jupyter Notebook</span>
+                                  <span class="skill-tag">Linux</span>
+                                  <span class="skill-tag">Google Colab</span>
+                                </div>
+                              </div>
+                              
+                        </div>
+                    </div>
+                </div>         
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/SIR.png" alt="ML Research Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>SIR Model Prediction</h3>
+                            <p>visualizes the performance of a trained MLP model on SIR simulation data, highlighting prediction accuracy for susceptible (S), infected (I), and recovered (R) compartments.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Deep Learning</span>
+                                <span>Data Science</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/SIR_ML_MODEL" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="assets/proj/Notebook.pdf" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
+                                    </svg>
+                                    Jupyter Notebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/MLP.png" alt="ML Research Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>AQI Prediction Using MLP NN</h3>
+                            <p>This project applies a Multilayer Perceptron (MLP) Regressor to predict Air Quality Index (AQI) based on pollutant data collected from Indian cities.<br> The model is trained using the city_day.csv dataset, which contains daily air pollution readings along with AQI values</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Deep Learning</span>
+                                <span>Data Science</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/neuralnet-dev/AQI_Prediction_Using_MLP" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/RBFNN.png" alt="ML Research Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>AQI Prediction using RBFNN</h3>
+                            <p>This project applies a Radial Basis Function Neural Network (RBFNN) to predict the Air Quality Index (AQI) based on pollutant data collected from Indian cities.<br> The model is trained using the city_day.csv dataset, which contains daily air pollution readings along with AQI values.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Deep Learning</span>
+                                <span>Data Science</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/neuralnet-dev/AQI_Prediction_using_RBFNN" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <!--<a href="#" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
+                                    </svg>
+                                    Paper-->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/portfoliowebsite.png" alt="portfolio website">
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>This is my personalized portfolio website.<br>It reflects my work in AI, Robotics and Programming. <br>Projects, Roles and Skills are displayed in a clean and interactive website.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/AsherJarvisPinto" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/gui.png" alt="Open Source Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Graphical User Interface (GUI)</h3>
+                            <p>I developed the GUI in Figma, prioritizing UI/UX principles to create an effective user interface.<br>The Initial Background was done in Procreate.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>Tkinter</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/guis" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://www.figma.com/design/ifH1W954dY3gr51D296Lo0/GUI-3DSCAPE--Community-?node-id=0-1&p=f&t=j1AROfiCiEdtZjzR-0" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
+                                    </svg>
+                                    Figma
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2024 - July 2024</div>
+                        <div class="timeline-content">
+                            <h3>Research Intern</h3>
+                            <h4>Indian Institute of Science (IISc), Bangalore</h4>
+                            <ul>
+                                <li>Gained hands-on experience in chemical process analysis through practical work with Batch Reactors and GC-MS instrumentation.</li>
+                                <li>Conducted over 3 literature reviews to identify key chemical indicators, and collected, cleaned, and fine-tuned more than 5 experimental datasets</li>
+                                <li>Applied both traditional ML algorithms (Linear Regression, SVM, Random Forest) and deep learning models (MLP, CNN) for prediction and classification tasks, achieving up to 85% accuracy and reducing preprocessing time by 30%</li>
+                                <li>Focused on identifying compound concentrations, reaction yields, and anomaly detection in chemical outputs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Project Intern</h3>
+                            <h4>NMAM Institute of Technology, Nitte</h4>
+                            <ul>
+                                <li>During my internship on the project <b>3DSCAPE</b>, I led the development of a user-friendly GUI that improved task completion time by 30% and enhanced user experience.</li>
+                                <li>I followed intuitive design principles and contributed over 250 lines of backend code, assisting with testing and integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="organizations" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Organizations</h2>
+        <div class="organizations-grid">
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 7 7-7 7z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">IEEE</h3>
+                <p class="organization-role">ExCom Member</p>
+                <p class="organization-period">2025 - Present</p>
+            </div>
+            
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.5 5h3v14h-3v-14zm-3.5 10h-2v4h2v-4zm10 0h-2v4h2v-4zm-5-10h-2v4h2v-4zm10 0h-2v4h2v-4z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">RISE Association</h3>
+                <p class="organization-role">Digital Head</p>
+                <p class="organization-period">2024 - Present</p>
+            </div>
+            
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">Robotics Club Nitte</h3>
+                <p class="organization-role">Poster Lead</p>
+                <p class="organization-period">2024 - Present</p>
+            </div>
+            
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3.374 17c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624zm3.374 0c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624zm3.374 0c-.897 0-1.626-.727-1.626-1.624s.729-1.624 1.626-1.624 1.626.727 1.626 1.624-.729 1.624-1.626 1.624z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">Radio Club Nitte</h3>
+                <p class="organization-role">Graphic Designer</p>
+                <p class="organization-period">2023 - 2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certificates" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Certificates</h2>
+        <div class="certificates-container fade-in">
+            <div class="certificate-navigation">
+                <button class="certificate-nav-btn prev-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <div class="certificate-viewer">
+                    <div class="certificate-slider">
+                        <div class="certificate-slide active">
+                            <img src="assets/certs/CANDR-1.png" alt="Certificate 1">
+                            <h3>Machine Learning Specialization</h3>
+                            <p>Stanford University & DeepLearning.AI</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/cyb.png" alt="Certificate 2">
+                            <h3>Cybersecurity Professional Certificate</h3>
+                            <p>Google</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/aicert.png" alt="Certificate 6">
+                            <h3>AI Essentials</h3>
+                            <p>Google</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/Bizint.png" alt="Certificate 6">
+                            <h3>Business Intelligence</h3>
+                            <p>Google</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/mat.png" alt="Certificate 6">
+                            <h3>MATLAB Onramp</h3>
+                            <p>Mathworks | Training Services</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/iee.png" alt="Certificate 6">
+                            <h3>Membership Certificate</h3>
+                            <p>IEEE</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/robaut.png" alt="Certificate 6">
+                            <h3>Membership Certificate</h3>
+                            <p>IEEE - Robotics and Automation Society</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="certificate-nav-btn next-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="certificate-modal">
+  <div class="certificate-modal-content">
+    <img src="/placeholder.svg" alt="Certificate">
+    <button class="certificate-modal-close">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info fade-in">
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                    </svg>
+                    <a href="mailto:asjpint@gmail.com">asjpint@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <a href="https://github.com/Awshae" target="_blank">github.com/Awshae</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <a href="https://linkedin.com/in/asherjarvispinto" target="_blank">linkedin.com/in/asherjarvispinto</a>
+                </div>
+            </div>
+            
+            <div class="contact-form fade-in">
+                <form id="contact-form" action="https://formsubmit.co/jarvis22043@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-spinner" style="display: none;"></span>
+                    </button>
+                    <input type="_subject" name="_subject" style="display:none;">
+                    <input type="_captcha" name="_captcha" value="false" style="display:none;">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+    <p> Asher Jarvis Pinto</p>
+    <h3>Thank you for visiting my Website!</h3>
+    <div class="back-to-top">
+        <a href="#hero">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
