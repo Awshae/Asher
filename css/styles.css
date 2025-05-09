@@ -485,7 +485,7 @@ header.scrolled {
   object-fit: cover;
   border-radius: inherit; 
   transition: transform var(--transition-slow), filter var(--transition-slow);
-  filter: grayscale(0%) contrast(1.1);
+  filter: grayscale(70%) contrast(1.1);
 }
 
 .image-container:hover {
@@ -495,7 +495,7 @@ header.scrolled {
 
 .image-container:hover .profile-pic {
   transform: scale(1.1); 
-  filter: grayscale(100%) contrast(1); 
+  filter: grayscale(0%) contrast(1); 
 }
 
 

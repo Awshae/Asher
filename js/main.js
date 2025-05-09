@@ -73,7 +73,7 @@ fadeElements.forEach((element) => {
   observer.observe(element)
 })
 
-// Contact Form Submission (Placeholder)
+// Contact Form Submission 
 contactForm.addEventListener("submit", () => {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -308,47 +308,6 @@ function initNeuralNetwork() {
   animate()
 }
 
-// Add typing animation for the tagline
-function initTypingAnimation() {
-  const tagline = document.querySelector(".typing-animation")
-  if (tagline) {
-    const text = tagline.textContent
-    tagline.textContent = ""
-    tagline.style.width = "0"
-
-    setTimeout(() => {
-      tagline.textContent = text
-      tagline.style.width = "100%"
-    }, 1000)
-  }
-}
-
-// Enhanced cursor effects
-function enhanceCursorEffects() {
-  const interactiveElements = document.querySelectorAll("a, button, .project-card, input, textarea")
-
-  interactiveElements.forEach((element) => {
-    element.addEventListener("mouseenter", () => {
-      cursor.style.width = "20px"
-      cursor.style.height = "20px"
-      cursor.style.backgroundColor = "#64ffda"
-      cursor.style.mixBlendMode = "normal"
-      cursorFollower.style.width = "50px"
-      cursorFollower.style.height = "50px"
-      cursorFollower.style.borderColor = "#64ffda"
-    })
-
-    element.addEventListener("mouseleave", () => {
-      cursor.style.width = "10px"
-      cursor.style.height = "10px"
-      cursor.style.backgroundColor = "#00e5ff"
-      cursor.style.mixBlendMode = "difference"
-      cursorFollower.style.width = "30px"
-      cursorFollower.style.height = "30px"
-      cursorFollower.style.borderColor = "#00e5ff"
-    })
-  })
-}
 
 // Add a glitch effect to the hero title
 function addGlitchEffect() {
@@ -554,9 +513,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initParticles()
   initNeuralNetwork()
   initHeroNeuralNetwork() // Add the new neural network for hero background
-  initTypingAnimation()
-  enhanceCursorEffects()
-  // Remove addGlitchEffect() to keep it clean
   createDataVisualization()
 
   // Add a small delay before adding the visible class to hero elements
