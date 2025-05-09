@@ -136,13 +136,17 @@ body {
 
 #neural-network-canvas, 
 #hero-neural-network {
-  position: fixed; 
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6; 
-  z-index: calc(var(--z-background) + 2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  opacity: 0.6;
+  z-index: -1;
   pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /*3.Layout --- */
