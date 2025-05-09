@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asher Jarvis Pinto | Portfolio</title>
-    <link rel="icon" href="assets/A.png" type="image/png">
+    <link rel="icon" href="assets/logo1.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
     
     <style>
     .tech-overlay {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.3)),
-            repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.1) 2px, rgba(0, 229, 255, 0.1) 4px);
-        z-index: 2;
-        pointer-events: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0.3)),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 229, 255, 0.1) 2px, rgba(0, 229, 255, 0.1) 4px);
+            z-index: 2;
+            pointer-events: none;
     }
     
     #neural-network-canvas {
@@ -82,7 +82,7 @@
             <div class="hero-cta fade-in">
                 <a href="#projects" class="btn primary-btn">View My Work</a>
                 <a href="#contact" class="btn secondary-btn">Get In Touch</a>
-                <a href="assets/resume.pdf" class="btn primary-btn" target="_blank">My Resume</a>
+                <a href="assets/Resume.pdf" class="btn primary-btn" target="_blank">My Resume</a>
             </div>
         </div>
         <canvas id="hero-neural-network" class="neural-network-background"></canvas>
@@ -109,8 +109,7 @@
                                   <span class="skill-tag">MySQL</span>
                                   <span class="skill-tag">JavaScript</span>
                                   <span class="skill-tag">React</span>
-                                  <span class="skill-tag">Flask</span>
-                                  <span class="skill-tag">VS Code</span>
+                                  <span class="skill-tag">C</span>
                                 </div>
                               </div>
                               
@@ -123,7 +122,6 @@
                                   <span class="skill-tag">NumPy</span>
                                   <span class="skill-tag">Keras</span>
                                   <span class="skill-tag">Matplotlib</span>
-                                  <span class="skill-tag">PyTorch</span>
                                 </div>
                               </div>
                               
@@ -135,13 +133,15 @@
                                   <span class="skill-tag">Control Systems</span>
                                   <span class="skill-tag">MATLAB</span>
                                   <span class="skill-tag">Simulink</span>
+                                  <span class="skill-tag">WPLSoft</span>
                                 </div>
                               </div>
                               
                               <div class="skill-category">
                                 <h3>Other Tools</h3>
                                 <div class="skill-tags">
-                                  <span class="skill-tag">Git / GitHub</span>
+                                  <span class="skill-tag">Git</span>
+                                  <span class="skill-tag">GitHub</span>
                                   <span class="skill-tag">Jupyter Notebook</span>
                                   <span class="skill-tag">Linux</span>
                                   <span class="skill-tag">Google Colab</span>
@@ -164,11 +164,13 @@
                         </div>
                         <div class="project-content">
                             <h3>SIR Model Prediction</h3>
-                            <p>visualizes the performance of a trained MLP model on SIR simulation data, highlighting prediction accuracy for susceptible (S), infected (I), and recovered (R) compartments.</p>
+                            <p>This Project Visualizes the performance of a trained MLP model on SIR simulation data, highlighting prediction accuracy for susceptible (S), infected (I), and recovered (R) compartments.</p>
                             <div class="project-tags">
                                 <span>Python</span>
                                 <span>Deep Learning</span>
                                 <span>Data Science</span>
+                                <span>SIR Model</span>
+                                <span>Simulation</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/Awshae/SIR_ML_MODEL" target="_blank" class="project-link">
@@ -192,12 +194,13 @@
                             <img src="assets/proj/MLP.png" alt="ML Research Project">
                         </div>
                         <div class="project-content">
-                            <h3>AQI Prediction Using MLP NN</h3>
+                            <h3>AQI Prediction Using MLP</h3>
                             <p>This project applies a Multilayer Perceptron (MLP) Regressor to predict Air Quality Index (AQI) based on pollutant data collected from Indian cities.<br> The model is trained using the city_day.csv dataset, which contains daily air pollution readings along with AQI values</p>
                             <div class="project-tags">
                                 <span>Python</span>
                                 <span>Deep Learning</span>
-                                <span>Data Science</span>
+                                <span>Regression</span>
+                                <span>MLP</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/neuralnet-dev/AQI_Prediction_Using_MLP" target="_blank" class="project-link">
@@ -212,7 +215,7 @@
 
                     <div class="project-card fade-in">
                         <div class="project-image">
-                            <img src="assets/proj/RBFNN.png" alt="ML Research Project">
+                            <img src="assets/proj/RB.png" alt="ML Research Project">
                         </div>
                         <div class="project-content">
                             <h3>AQI Prediction using RBFNN</h3>
@@ -220,7 +223,8 @@
                             <div class="project-tags">
                                 <span>Python</span>
                                 <span>Deep Learning</span>
-                                <span>Data Science</span>
+                                <span>Custom Neural Network</span>
+                                <span>RBFNN</span>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/neuralnet-dev/AQI_Prediction_using_RBFNN" target="_blank" class="project-link">
@@ -234,6 +238,82 @@
                                         <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
                                     </svg>
                                     Paper-->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/cnn.png" alt="CNN">
+                        </div>
+                        <div class="project-content">
+                            <h3>CI-FAKE CNN Image Classifier</h3>
+                            <p>This project applies a Convolutional Neural Network to predict Real vs. AI-synthesized Images using the CIFAKE dataset.<br> The model is trained with a MobileNetV2 base model.</p>
+                            <div class="project-tags">
+                                <span>Deep Learning</span>
+                                <span>MobileNetV2</span>
+                                <span>Classifier</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/neuralnet-dev/Real-VS-AI-Image-Pred-CNN" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/Blockdiagram.png" alt="Block Diagram">
+                        </div>
+                        <div class="project-content">
+                            <h3>2-DOF Forward Kinematics</h3>
+                            <p>As part of my Kinematics and Dynamics of Robots course, I worked with MATLAB and Simulink to simulate the forward kinematics of a 2-DOF robotic arm. <br>Using built-in blocks and the Transform Tree, I visualized joint motion and extracted the end-effector’s position in 3D space.</p>
+                            <div class="project-tags">
+                                <span>Matlab</span>
+                                <span>Simulink</span>
+                                <span>Kinematics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/2_DoF_ForwardKinematics" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="assets/proj/gui.png" alt="GUI">
+                        </div>
+                        <div class="project-content">
+                            <h3>Graphical User Interface (GUI)</h3>
+                            <p>I designed the GUI in Figma, applying core UI/UX principles to ensure an intuitive and visually appealing user experience.<br> The initial background artwork was created in Procreate, adding a custom, hand-crafted aesthetic to the interface.</p>
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>Tkinter</span>
+                                <span>UI/UX</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/guis" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                                <a href="https://www.figma.com/design/ifH1W954dY3gr51D296Lo0/GUI-3DSCAPE--Community-?node-id=0-1&p=f&t=j1AROfiCiEdtZjzR-0" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
+                                    </svg>
+                                    Figma
                                 </a>
                             </div>
                         </div>
@@ -257,35 +337,6 @@
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                     GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card fade-in">
-                        <div class="project-image">
-                            <img src="assets/proj/gui.png" alt="Open Source Project">
-                        </div>
-                        <div class="project-content">
-                            <h3>Graphical User Interface (GUI)</h3>
-                            <p>I developed the GUI in Figma, prioritizing UI/UX principles to create an effective user interface.<br>The Initial Background was done in Procreate.</p>
-                            <div class="project-tags">
-                                <span>Figma</span>
-                                <span>Tkinter</span>
-                                <span>UI/UX</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Awshae/guis" target="_blank" class="project-link">
-                                    <svg class="icon" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                    </svg>
-                                    GitHub
-                                </a>
-                                <a href="https://www.figma.com/design/ifH1W954dY3gr51D296Lo0/GUI-3DSCAPE--Community-?node-id=0-1&p=f&t=j1AROfiCiEdtZjzR-0" target="_blank" class="project-link">
-                                    <svg class="icon" viewBox="0 0 24 24">
-                                        <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z"/>
-                                    </svg>
-                                    Figma
                                 </a>
                             </div>
                         </div>
@@ -339,7 +390,18 @@
                     </svg>
                 </div>
                 <h3 class="organization-name">IEEE</h3>
-                <p class="organization-role">ExCom Member</p>
+                <p class="organization-role">Executive Committee Member</p>
+                <p class="organization-period">2025 - Present</p>
+            </div>
+
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 7 7-7 7z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">IEEE Robotics and Automation Society</h3>
+                <p class="organization-role">Member</p>
                 <p class="organization-period">2025 - Present</p>
             </div>
             
@@ -376,6 +438,15 @@
                 <p class="organization-role">Graphic Designer</p>
                 <p class="organization-period">2023 - 2024</p>
             </div>
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.5 5h3v14h-3v-14zm-3.5 10h-2v4h2v-4zm10 0h-2v4h2v-4zm-5-10h-2v4h2v-4zm10 0h-2v4h2v-4z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">RISE Association</h3>
+                <p class="organization-role">Graphics Head</p>
+                <p class="organization-period">2023 - 2024</p>
         </div>
     </div>
 </section>
@@ -416,6 +487,11 @@
                             <img src="assets/certs/mat.png" alt="Certificate 6">
                             <h3>MATLAB Onramp</h3>
                             <p>Mathworks | Training Services</p>
+                        </div>
+                        <div class="certificate-slide">
+                            <img src="assets/certs/graph.jpg" alt="Certificate 6">
+                            <h3>Graphic Design-Masterclass</h3>
+                            <p>Lindsay Marsh</p>
                         </div>
                         <div class="certificate-slide">
                             <img src="assets/certs/iee.png" alt="Certificate 6">

@@ -9,8 +9,6 @@ const fadeElements = document.querySelectorAll(".fade-in")
 const cursor = document.querySelector(".cursor")
 const cursorFollower = document.querySelector(".cursor-follower")
 const contactForm = document.getElementById("contact-form")
-const themeToggle = document.getElementById('themeToggle');
-
 
 
 // Mobile Menu Toggle
