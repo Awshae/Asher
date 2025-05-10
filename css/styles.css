@@ -145,8 +145,7 @@ body {
   opacity: 0.6;
   z-index: -1;
   pointer-events: none;
-  will-change: transform;
-  transform: translateZ(0);
+  
 }
 
 /*3.Layout --- */
@@ -886,7 +885,7 @@ header.scrolled {
 
 /* --- 13. Certificates Section --- */
 #certificates .container {
-  max-width: 900px; /* Limit width for slider */
+  max-width: 80%; /* Limit width for slider */
 }
 
 .certificates-wrapper { /* New wrapper for layout */
