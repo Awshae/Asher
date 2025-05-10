@@ -754,7 +754,7 @@ const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 let nodeCount, connectionDistance, nodeRadius, nodeSpeed, opacity;
 
 if (isAndroid) {
-  nodeCount = 20;
+  nodeCount = 5;
   connectionDistance = 65;
   nodeRadius = 1.0;
   nodeSpeed = 0.08;
