@@ -10,7 +10,6 @@ const cursor = document.querySelector(".cursor")
 const cursorFollower = document.querySelector(".cursor-follower")
 const contactForm = document.getElementById("contact-form")
 
-
 // Mobile Menu Toggle
 mobileMenuBtn.addEventListener("click", () => {
   mobileMenuBtn.classList.toggle("active")
@@ -728,8 +727,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Only run network animation on Android devices
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    if (!isAndroid) return;
+  const isandroid = /Android/i.test(navigator.userAgent);
+    if (!isandroid) return;
 
     const heroCanvas = document.getElementById("hero-neural-network");
     if (!heroCanvas) return;
@@ -748,11 +747,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const height = heroCanvas.height;
 
     // ⚠️ Aggressively reduce node density and complexity
-    const nodeCount = 20;
-    const connectionDistance = 70;
-    const nodeRadius = 1.2;
-    const nodeSpeed = 0.1;
-    const opacity = 0.1;
+    
+
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+let nodeCount, connectionDistance, nodeRadius, nodeSpeed, opacity;
+
+if (isAndroid) {
+  nodeCount = 20;
+  connectionDistance = 65;
+  nodeRadius = 1.0;
+  nodeSpeed = 0.08;
+  opacity = 0.08;
+} else if (isIOS) {
+  nodeCount = 40;
+  connectionDistance = 90;
+  nodeRadius = 1.5;
+  nodeSpeed = 0.15;
+  opacity = 0.15;
+} else {
+  nodeCount = 50;
+  connectionDistance = 100;
+  nodeRadius = 1.5;
+  nodeSpeed = 0.15;
+  opacity = 0.15;
+}
 
     const nodes = [];
     for (let i = 0; i < nodeCount; i++) {
