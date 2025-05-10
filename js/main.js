@@ -721,27 +721,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Check if device is mobile Android
-    const isMobileAndroid = /Android/i.test(navigator.userAgent) && /Mobi/i.test(navigator.userAgent);
+  window.addEventListener('DOMContentLoaded', () => {
+    // Run fade-slide logic for all devices
+    document.querySelectorAll('.fade-slide').forEach(el => {
+      el.classList.add('visible');
+    });
 
-    if (!isMobileAndroid) return; // Exit early if not a mobile Android device
+    // Only run network animation on Android devices
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    if (!isAndroid) return;
 
     const heroCanvas = document.getElementById("hero-neural-network");
     if (!heroCanvas) return;
 
     const ctx = heroCanvas.getContext("2d");
-    let width = window.innerWidth;
-    let height = window.innerHeight;
 
-    heroCanvas.width = width;
-    heroCanvas.height = height;
+    function resizeCanvas() {
+      heroCanvas.width = window.innerWidth;
+      heroCanvas.height = window.innerHeight;
+    }
 
-    const nodeCount = 30;
-    const connectionDistance = 100;
-    const nodeRadius = 1.5;
-    const nodeSpeed = 0.2;
-    const opacity = 0.15;
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const width = heroCanvas.width;
+    const height = heroCanvas.height;
+
+    // ⚠️ Aggressively reduce node density and complexity
+    const nodeCount = 20;
+    const connectionDistance = 70;
+    const nodeRadius = 1.2;
+    const nodeSpeed = 0.1;
+    const opacity = 0.1;
 
     const nodes = [];
     for (let i = 0; i < nodeCount; i++) {
@@ -749,32 +760,33 @@ document.addEventListener("DOMContentLoaded", () => {
         x: Math.random() * width,
         y: Math.random() * height,
         vx: (Math.random() - 0.5) * nodeSpeed,
-        vy: (Math.random() - 0.5) * nodeSpeed,
+        vy: (Math.random() - 0.5) * nodeSpeed
       });
     }
 
     function animate() {
-      ctx.clearRect(0, 0, width, height);
+      ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
 
-      nodes.forEach((node) => {
+      nodes.forEach(node => {
         node.x += node.vx;
         node.y += node.vy;
 
-        if (node.x <= 0 || node.x >= width) node.vx *= -1;
-        if (node.y <= 0 || node.y >= height) node.vy *= -1;
+        if (node.x <= 0 || node.x >= heroCanvas.width) node.vx *= -1;
+        if (node.y <= 0 || node.y >= heroCanvas.height) node.vy *= -1;
       });
 
-      ctx.lineWidth = 0.5;
+      ctx.lineWidth = 0.3;
+
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < connectionDistance) {
-            const lineOpacity = (1 - distance / connectionDistance) * opacity;
+          if (dist < connectionDistance) {
+            const alpha = (1 - dist / connectionDistance) * opacity;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 229, 255, ${lineOpacity})`;
+            ctx.strokeStyle = `rgba(0, 229, 255, ${alpha})`;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             ctx.stroke();
@@ -782,24 +794,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      ctx.fillStyle = "rgba(0, 229, 255, 0.6)";
-      nodes.forEach((node) => {
+      ctx.fillStyle = "rgba(0, 229, 255, 0.5)";
+      nodes.forEach(node => {
         ctx.beginPath();
-        ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, nodeRadius, 0, 2 * Math.PI);
         ctx.fill();
       });
 
-      setTimeout(() => requestAnimationFrame(animate), 1000 / 20); // 20 FPS
+      // 20 FPS for Android
+      setTimeout(() => requestAnimationFrame(animate), 1000 / 20);
     }
 
-    window.addEventListener("resize", () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      heroCanvas.width = width;
-      heroCanvas.height = height;
-    });
-
     animate();
-  })
+  });
 
 });
