@@ -54,10 +54,11 @@
         <div class="nav-links">
             <a href="#hero" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
             <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
             <a href="#organizations" class="nav-link">Organizations</a>
             <a href="#certificates" class="nav-link">Certificates</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
         <div class="mobile-menu-btn">
@@ -92,7 +93,7 @@
                 <div class="about-content">
 
                     <div class="image-container fade-in">
-                        <img src="assets/pfp.png" alt="Profile Picture" role="presentation" class="profile-pic" />
+                        <img src="assets/pfp.jpeg" alt="Profile Picture" role="presentation" class="profile-pic" />
                     </div>
 
                     <div class="about-text fade-in">
@@ -148,6 +149,69 @@
                         </div>
                     </div>
                 </div>         
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Experience</h2>
+                <div class="timeline">
+                    <!--
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2025 - August 2025</div>
+                        <div class="timeline-content">
+                            <h3>Space Tech Intern</h3>
+                            <h4>Indian Space Laboratory</h4>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2025 - July 2025</div>
+                        <div class="timeline-content">
+                            <h3>Project Intern</h3>
+                            <h4>Regional Remote Sensing Centre, RRSC-South, ISRO Bangalore</h4>
+                            <ul>
+                                <li>Annotated 2000+ images for object detection in <b>Plastic Waste Classification.</b></li>
+                                <li>Compared and contrasted several ML models, heavily focusing on Faster R-CNN and YOLOv8 models. Achieved 83% accuracy with YOLOv8n, proving optimal for deployment.</li>
+                                <li>Enabled fast, lightweight, and accurate detection for real-time environmental monitoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2024 - July 2024</div>
+                        <div class="timeline-content">
+                            <h3>Research Intern</h3>
+                            <h4>Indian Institute of Science (IISc), Bangalore</h4>
+                            <ul>
+                                <li>Gained hands-on experience in chemical process analysis through practical work with Batch Reactors and GC-MS instrumentation.</li>
+                                <li>Conducted over 3 literature reviews to identify key chemical indicators, and collected, cleaned, and fine-tuned more than 5 experimental datasets</li>
+                                <li>Applied both traditional ML algorithms (Linear Regression, SVM, Random Forest) and deep learning models (MLP, CNN) for prediction and classification tasks, achieving up to 85% accuracy and reducing preprocessing time by 30%</li>
+                                <li>Focused on identifying compound concentrations, reaction yields, and anomaly detection in chemical outputs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Project Intern</h3>
+                            <h4>NMAM Institute of Technology, Nitte</h4>
+                            <ul>
+                                <li>During my internship on the project <b>3DSCAPE</b>, I led the development of a user-friendly GUI that improved task completion time by 30% and enhanced user experience.</li>
+                                <li>I followed intuitive design principles and contributed to over 250 lines of backend code, assisting with testing and integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -271,7 +335,7 @@
                             <h3>2-DOF Forward Kinematics</h3>
                             <p>As part of my Kinematics and Dynamics of Robots course, I worked with MATLAB and Simulink to simulate the forward kinematics of a 2-DOF robotic arm. <br>Using built-in blocks and the Transform Tree, I visualized joint motion and extracted the end-effector’s position in 3D space.</p>
                             <div class="project-tags">
-                                <span>Matlab</span>
+                                <span>MATLAB</span>
                                 <span>Simulink</span>
                                 <span>Kinematics</span>
                             </div>
@@ -318,6 +382,30 @@
 
                     <div class="project-card fade-in">
                         <div class="project-image">
+                            <img src="assets/proj/mat.png" alt="MATLAB">
+                        </div>
+                        <div class="project-content">
+                            <h3>Voice Analysis with MATLAB</h3>
+                            <p>As part of my Consumer Electronics course, I worked with MATLAB to analyze a voice file and extract features such as Pitch, Amplitude, Timbre and SNR ratio.<br>It further classifies the voice signal into one of four moods: Happy, Sad, Stressed and Calm.</p>
+                            <div class="project-tags">
+                                <span>MATLAB</span>
+                                <span>Signal Processing</span>
+                            </div>
+                        <!--
+                            <div class="project-links">
+                                <a href="https://github.com/Awshae/2_DoF_ForwardKinematics" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        -->
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
                             <img src="assets/proj/portfoliowebsite.png" alt="portfolio website">
                         </div>
                         <div class="project-content">
@@ -342,40 +430,6 @@
             </div>
         </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">June 2024 - July 2024</div>
-                        <div class="timeline-content">
-                            <h3>Research Intern</h3>
-                            <h4>Indian Institute of Science (IISc), Bangalore</h4>
-                            <ul>
-                                <li>Gained hands-on experience in chemical process analysis through practical work with Batch Reactors and GC-MS instrumentation.</li>
-                                <li>Conducted over 3 literature reviews to identify key chemical indicators, and collected, cleaned, and fine-tuned more than 5 experimental datasets</li>
-                                <li>Applied both traditional ML algorithms (Linear Regression, SVM, Random Forest) and deep learning models (MLP, CNN) for prediction and classification tasks, achieving up to 85% accuracy and reducing preprocessing time by 30%</li>
-                                <li>Focused on identifying compound concentrations, reaction yields, and anomaly detection in chemical outputs.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2022 - 2023</div>
-                        <div class="timeline-content">
-                            <h3>Project Intern</h3>
-                            <h4>NMAM Institute of Technology, Nitte</h4>
-                            <ul>
-                                <li>During my internship on the project <b>3DSCAPE</b>, I led the development of a user-friendly GUI that improved task completion time by 30% and enhanced user experience.</li>
-                                <li>I followed intuitive design principles and contributed over 250 lines of backend code, assisting with testing and integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="organizations" class="section">
     <div class="container">
         <h2 class="section-title fade-in">Organizations</h2>
@@ -386,9 +440,20 @@
                         <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 7 7-7 7z"/>
                     </svg>
                 </div>
+                <h3 class="organization-name">IEEEXtreme</h3>
+                <p class="organization-role">Campus Ambassador</p>
+                <p class="organization-period">June 2025 - Present</p>
+            </div>
+
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 7 7-7 7z"/>
+                    </svg>
+                </div>
                 <h3 class="organization-name">IEEE</h3>
-                <p class="organization-role">Executive Committee Member</p>
-                <p class="organization-period">2025 - Present</p>
+                <p class="organization-role">Executive Committee - Treasurer</p>
+                <p class="organization-period">March 2025 - Present</p>
             </div>
 
             <div class="organization-card fade-in">
@@ -399,19 +464,7 @@
                 </div>
                 <h3 class="organization-name">IEEE Robotics and Automation Society</h3>
                 <p class="organization-role">Member</p>
-                <p class="organization-period">2025 - Present</p>
-            </div>
-            
-            <div class="organization-card fade-in">
-                <div class="organization-logo">
-                    <svg viewBox="0 0 24 24">
-
-                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.5 5h3v14h-3v-14zm-3.5 10h-2v4h2v-4zm10 0h-2v4h2v-4zm-5-10h-2v4h2v-4zm10 0h-2v4h2v-4z"/>
-                    </svg>
-                </div>
-                <h3 class="organization-name">RISE Association</h3>
-                <p class="organization-role">Digital Head</p>
-                <p class="organization-period">2024 - Present</p>
+                <p class="organization-period">March 2025 - Present</p>
             </div>
             
             <div class="organization-card fade-in">
@@ -422,7 +475,19 @@
                 </div>
                 <h3 class="organization-name">Robotics Club Nitte</h3>
                 <p class="organization-role">Poster Lead</p>
-                <p class="organization-period">2024 - Present</p>
+                <p class="organization-period">Nov 2024 - May 2025</p>
+            </div>
+
+            <div class="organization-card fade-in">
+                <div class="organization-logo">
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.5 5h3v14h-3v-14zm-3.5 10h-2v4h2v-4zm10 0h-2v4h2v-4zm-5-10h-2v4h2v-4zm10 0h-2v4h2v-4z"/>
+                    </svg>
+                </div>
+                <h3 class="organization-name">RISE Association</h3>
+                <p class="organization-role">Digital Head</p>
+                <p class="organization-period">August 2024 - May 2025</p>
             </div>
             
             <div class="organization-card fade-in">
@@ -433,8 +498,9 @@
                 </div>
                 <h3 class="organization-name">Radio Club Nitte</h3>
                 <p class="organization-role">Graphic Designer</p>
-                <p class="organization-period">2023 - 2024</p>
+                <p class="organization-period">Oct 2023 - May 2024</p>
             </div>
+
             <div class="organization-card fade-in">
                 <div class="organization-logo">
                     <svg viewBox="0 0 24 24">
@@ -443,12 +509,13 @@
                 </div>
                 <h3 class="organization-name">RISE Association</h3>
                 <p class="organization-role">Graphics Head</p>
-                <p class="organization-period">2023 - 2024</p>
+                <p class="organization-period">Sept 2023 - May 2024</p>
+            </div>
         </div>
     </div>
-</section>
+        </section>
 
-<section id="certificates" class="section">
+        <section id="certificates" class="section">
     <div class="container">
         <h2 class="section-title fade-in">Certificates</h2>
         <div class="certificates-container fade-in">
@@ -510,18 +577,28 @@
             </div>
         </div>
     </div>
-</section>
+        </section>
 
-<div class="certificate-modal">
-  <div class="certificate-modal-content">
-    <img src="/placeholder.svg" alt="Certificate">
-    <button class="certificate-modal-close">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-      </svg>
-    </button>
-  </div>
-</div>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Photo Gallery</h2>
+            <div class="gallery-container">
+                <figure class="gallery-item">
+                    <img src="assets/gallery/iisc.jpg" alt="A sprawling view of the Indian Institute of Science campus" loading="lazy" decoding="async">
+                    <figcaption>Indian Institute of Science, Bangalore</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/gallery/isro.jpg" alt="The Indian Space Research Organisation headquarters building" loading="lazy" decoding="async">
+                    <figcaption>ISRO HQ, Bangalore</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/gallery/rrsc.jpg" alt="An aerial shot of the Regional Remote Sensing Centre South" loading="lazy" decoding="async">
+                    <figcaption>RRSC - South, Bangalore</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
 <section id="contact" class="section">
     <div class="container">

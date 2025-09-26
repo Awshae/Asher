@@ -828,3 +828,36 @@ if (isAndroid) {
   });
 
 });
+
+// Scroll fade removal
+const galleryScroll = document.querySelector('.gallery-scroll');
+galleryScroll.addEventListener('scroll', () => {
+  if (galleryScroll.scrollTop > 20) {
+    galleryScroll.classList.add('scrolled');
+    galleryScroll.classList.add('fade-top');
+  } else {
+    galleryScroll.classList.remove('scrolled');
+  }
+
+});
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+// Close lightbox on click outside image
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) lightbox.style.display = 'none';
+});
